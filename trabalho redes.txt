@@ -1,0 +1,36 @@
+Passo a passo do que fiz:
+
+1-Coloquei 1 roteador 1 switch 5 pc 1 servidor e  1 impressora.
+2- conectei eles através de um cabo.
+3-cliquei no roteador e abri o CLI.
+4- enable.
+5-configure terminal.
+6-interface gigabiteternet 0/0.
+7- no shutdown
+8- exit
+9- ip dhcp pool LAB
+10- network 192.168.1.0 255.255.255.0
+11- default-router 192.168.1.254
+12- exit
+13- interface gigabitethernet 0/0
+14- ip address 192.168.1.254 255.255.255.0
+15-no shutdown
+16- cntrl z
+17- coloquei ip static na impressora 192.168.1.253 e subnet mask 255.255.255.0
+18- Criei outro  grupo de rede com 1 roteador 1 switch 7 pc 1 servidor e 1 impressora
+19- enable.
+20-configure terminal.
+21-interface gigabiteternet 0/1.
+22- no shutdown
+23-exit
+24- ip dhcp pool LAB-B
+25- network 192.168.2.0 255.255.255.0
+26- default-router 192.168.2.254
+27- exit
+28- interface gigabitethernet 0/1
+29- ip address 192.168.2.254 255.255.255.0
+30-no shutdown
+31- cntrl z
+32- Ativei dhcp nos 7 computadores
+33- coloquei ip statico na impressora 192.168.2.253 e subnet mask 255.255.255.0
+34-configurei os servidores 
